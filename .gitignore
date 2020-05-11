@@ -139,4 +139,4 @@ cython_debug/
 
 # My ignores
 checkpoints/
-dataset/K1*
+dataset/KT1*
