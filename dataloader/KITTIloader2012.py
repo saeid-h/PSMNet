@@ -19,11 +19,18 @@ def dataloader(filepath):
   left_fold  = 'colored_0/'
   right_fold = 'colored_1/'
   disp_noc   = 'disp_occ/'
+  total_folding = 4
+  folding_index = 0
 
   image = [img for img in os.listdir(filepath+left_fold) if img.find('_10') > -1]
 
-  train = image[:]
-  val   = image[160:]
+  image.sort() 
+  n = len(image) // total_folding
+  val = image[n*folding_index:n*(folding_index+1)]
+  train = [x for x in image if x not in val]
+
+#  train = image[:]
+#  val   = image[160:]
 
   left_train  = [filepath+left_fold+img for img in train]
   right_train = [filepath+right_fold+img for img in train]
