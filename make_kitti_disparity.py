@@ -46,7 +46,7 @@ if __name__ == '__main__':
 			filename = str(i).zfill(6) + '_10.png'
 			args.leftimg = os.path.join(training_left_path, filename)
 			args.rightimg = os.path.join(training_right_path, filename)
-			args.results = os.path.join(results_path, 'KT15/training/')
+			args.results = os.path.join(results_path, 'training/')
 			Test(args, model)
 		testing_left_path = os.path.join(args.dataset_path, 'testing/image_2/')
 		testing_right_path = os.path.join(args.dataset_path, 'testing/image_3/')
@@ -54,7 +54,7 @@ if __name__ == '__main__':
 			filename = str(i).zfill(6) + '_10.png'
 			args.leftimg = os.path.join(testing_left_path, filename)
 			args.rightimg = os.path.join(testing_right_path, filename)
-			args.results = os.path.join(results_path, 'KT15/testing/')
+			args.results = os.path.join(results_path, 'testing/')
 			Test(args, model)
 
 	if args.KITTI in ['12', '2012']:
@@ -64,7 +64,7 @@ if __name__ == '__main__':
 			filename = str(i).zfill(6) + '_10.png'
 			args.leftimg = os.path.join(training_left_path, filename)
 			args.rightimg = os.path.join(training_right_path, filename)
-			args.results = os.path.join(results_path, 'KT12/training/')
+			args.results = os.path.join(results_path, 'training/')
 			Test(args, model)
 		testing_left_path = os.path.join(args.dataset_path, 'testing/image_0/')
 		testing_right_path = os.path.join(args.dataset_path, 'testing/image_1/')
@@ -72,5 +72,5 @@ if __name__ == '__main__':
 			filename = str(i).zfill(6) + '_10.png'
 			args.leftimg = os.path.join(testing_left_path, filename)
 			args.rightimg = os.path.join(testing_right_path, filename)
-			args.results = os.path.join(results_path, 'KT12/testing/')
+			args.results = os.path.join(results_path, 'testing/')
 			Test(args, model)
