@@ -7,7 +7,7 @@ parser.add_argument('--loadmodel', default='./trained/pretrained_model_KITTI2015
 parser.add_argument('--leftimg', default= './VO04_L.png', help='load model')
 parser.add_argument('--rightimg', default= './VO04_R.png', help='load model')
 parser.add_argument('--dataset-path', default= './dataset/KT15/', help='load model')
-parser.add_argument('--results-path', default= './results/', help='load model')
+parser.add_argument('--results-path', default= './results/KT15/', help='load model')
 parser.add_argument('--model', default='stackhourglass', help='select model')
 parser.add_argument('--maxdisp', type=int, default=192, help='maxium disparity')
 parser.add_argument('--no-cuda', action='store_true', default=False, help='enables CUDA training')
